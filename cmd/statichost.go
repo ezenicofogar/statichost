@@ -31,7 +31,7 @@ var statichost = &cobra.Command{
 		})
 		fmt.Printf("Statichost v%d.%d\n", version_major, version_minor)
 		fmt.Printf("Serving %s\n", folder)
-		fmt.Printf("at %s:%d\n", connection_host, connection_port)
+		fmt.Printf("at http://%s:%d\n", connection_host, connection_port)
 		app.Listen(fmt.Sprintf("%s:%d", connection_host, connection_port))
 	},
 }
